@@ -1,3 +1,5 @@
+Steam workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2770901032
+
 # Description
 
 The mod that makes security clothing work more like medic's clothing by creating 2 ammo slots and an additional holster slot for weapons *(with proper visuals with client-side lua)*.
