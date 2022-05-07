@@ -1,3 +1,4 @@
+print('clothing_gun_holster.lua')
 local enabled = Game.GetEnabledContentPackages()
 local isEnabled = false
 for key, value in pairs(enabled) do
@@ -9,7 +10,7 @@ end
 if not isEnabled then return end
 
 
-local config = dofile("Mods/Security clothing plus/Lua/config.lua")
+local config = dofile(SecurityClothingPlus.Path .. "/Lua/config.lua")
 
 
 local list_ItemComponentType = LuaUserData.RegisterType("System.Collections.Generic.List`1[Barotrauma.Items.Components.ItemComponent]")
@@ -20,6 +21,7 @@ local wearableSpriteType = LuaUserData.RegisterType("Barotrauma.WearableSprite")
 local itemComponentType = LuaUserData.RegisterType("Barotrauma.Items.Components.ItemComponent")
 local wearableType = LuaUserData.RegisterType("Barotrauma.Items.Components.Wearable")
 local list_WearableSpriteType = LuaUserData.RegisterType("System.Collections.Generic.List`1[Barotrauma.WearableSprite]")
+local ContentXElementType = LuaUserData.RegisterType("Barotrauma.ContentXElement")
 
 local ItemComponent = LuaUserData.CreateStatic("Barotrauma.Items.Components.ItemComponent")
 local Wearable = LuaUserData.CreateStatic("Barotrauma.Items.Components.Wearable")
@@ -29,6 +31,7 @@ local XElement = LuaUserData.CreateStatic("System.Xml.Linq.XElement")
 local XAttribute = LuaUserData.CreateStatic("System.Xml.Linq.XAttribute")
 local List_ItemComponent = LuaUserData.CreateStatic("System.Collections.Generic.List`1[Barotrauma.Items.Components.ItemComponent]")
 local List_WearableSprite = LuaUserData.CreateStatic("System.Collections.Generic.List`1[Barotrauma.WearableSprite]")
+local ContentXElement = LuaUserData.CreateStatic("Barotrauma.ContentXElement")
 
 
 
@@ -250,18 +253,20 @@ end
 
 function getCharTorso(char)
     for i,limb in pairs(char.AnimController.Limbs) do
-        if tostring(limb.type) == 'Torso' then return limb end
+        if limb.type == 12 then return limb end -- 'Torso'
     end
     return nil
 end
 
 function setHolsterVisual(char, itemEntry, gunType)
+    print('setHolsterVisual')
     local clothing = itemEntry.item
 
     -- try get torso limb
     local torso = getCharTorso(char)
 
     if torso ~= nil then
+        print(torso)
         -- if torso exists update sprites
         local wSprites = torso.WearingItems
 
@@ -289,8 +294,16 @@ function setHolsterVisual(char, itemEntry, gunType)
                 end
             end
 
-            local gunSprite = WearableSprite.__new(config.sprites[gunType], wearable, 0)
-            gunSprite.Init(0) -- Gender.None
+            local sprite = nil
+            for key,value in pairs(config.sprites) do
+                if key == gunType then
+                    sprite = value
+                    break
+                end
+            end
+            local cxelem = ContentXElement.__new(null, sprite)
+            local gunSprite = WearableSprite.__new(cxelem, wearable, 0)
+            gunSprite.Init(char)
             wSprites.Add(gunSprite)
         end
     end

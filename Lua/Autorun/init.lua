@@ -1,3 +1,6 @@
+SecurityClothingPlus = {}
+SecurityClothingPlus.Path = table.pack(...)[1]
+
 if SERVER then
-    dofile("Mods/Security clothing plus/Lua/clothing_gun_holster.lua")
+    -- no server code
 end

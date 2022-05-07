@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Security clothing plus" path="Mods/Security clothing plus/filelist.xml" corepackage="false" gameversion="0.16.7.0" steamworkshopid="2770901032" installtime="1647299369">
-  <Item file="Mods/Security clothing plus/Items/Jobgear/Security/securityofficer_gear.xml" />
-  <None file="Mods/Security clothing plus/Lua/config.lua" />
-  <None file="Mods/Security clothing plus/Lua/Autorun/init.lua" />
-  <None file="Mods/Security clothing plus/Lua/ForcedAutorun/init.lua" />
-  <None file="Mods/Security clothing plus/Lua/clothing_gun_holster.lua" />
+<contentpackage name="Security clothing plus" steamworkshopid="2770901032" corepackage="false" modversion="1.0.2" gameversion="0.17.15.0" installtime="1651960630" expectedhash="DF4E05A7ADB975FF06B811D92F1712F1">
+  <Item file="%ModDir%/Items/Jobgear/Security/securityofficer_gear.xml" />
+  <Other file="%ModDir%/Lua/config.lua" />
+  <Other file="%ModDir%/Lua/Autorun/init.lua" />
+  <Other file="%ModDir%/Lua/clothing_gun_holster.lua" />
 </contentpackage>

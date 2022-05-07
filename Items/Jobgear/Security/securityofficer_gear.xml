@@ -37,7 +37,7 @@
         <Containable items="weapon,gun" excludeditems="" />
         <SlotIcon slotindex="0" texture="Content/UI/CampaignUIAtlas.png" sourcerect="470,189,151,143" origin="0.5,0.5" />
         <SubContainer capacity="2">
-          <Containable items="harpoonammo,revolverammo,pistolammoitem,smgammo,demolitionsexpert,mobilebattery,grenade,shotgunammo,stungunammo,reactorfuel,assaultrifleammo" excludeditems="mobilecontainer"/>
+          <Containable items="harpoonammo,revolverammo,pistolammoitem,smgammo,demolitionsexpert,mobilebattery,grenade,shotgunammo,stungunammo,reactorfuel,assaultrifleammo" excludeditems="mobilecontainer" />
         </SubContainer>
       </ItemContainer>
     </Item>
@@ -79,7 +79,7 @@
         <Containable items="weapon,gun" excludeditems="" />
         <SlotIcon slotindex="0" texture="Content/UI/CampaignUIAtlas.png" sourcerect="470,189,151,143" origin="0.5,0.5" />
         <SubContainer capacity="2">
-          <Containable items="harpoonammo,revolverammo,pistolammoitem,smgammo,demolitionsexpert,mobilebattery,grenade,shotgunammo,stungunammo,reactorfuel,assaultrifleammo" excludeditems="mobilecontainer"/>
+          <Containable items="harpoonammo,revolverammo,pistolammoitem,smgammo,demolitionsexpert,mobilebattery,grenade,shotgunammo,stungunammo,reactorfuel,assaultrifleammo" excludeditems="mobilecontainer" />
         </SubContainer>
       </ItemContainer>
     </Item>
@@ -121,7 +121,7 @@
         <Containable items="weapon,gun" excludeditems="" />
         <SlotIcon slotindex="0" texture="Content/UI/CampaignUIAtlas.png" sourcerect="470,189,151,143" origin="0.5,0.5" />
         <SubContainer capacity="2">
-          <Containable items="harpoonammo,revolverammo,pistolammoitem,smgammo,demolitionsexpert,mobilebattery,grenade,shotgunammo,stungunammo,reactorfuel,assaultrifleammo" excludeditems="mobilecontainer"/>
+          <Containable items="harpoonammo,revolverammo,pistolammoitem,smgammo,demolitionsexpert,mobilebattery,grenade,shotgunammo,stungunammo,reactorfuel,assaultrifleammo" excludeditems="mobilecontainer" />
         </SubContainer>
       </ItemContainer>
     </Item>
