@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Security clothing plus" steamworkshopid="2770901032" corepackage="false" modversion="1.0.2" gameversion="0.17.15.0" installtime="1651960630" expectedhash="DF4E05A7ADB975FF06B811D92F1712F1">
+<contentpackage name="Security clothing plus" modversion="1.0.4" corepackage="False" steamworkshopid="2770901032" gameversion="0.17.15.0">
   <Item file="%ModDir%/Items/Jobgear/Security/securityofficer_gear.xml" />
   <Other file="%ModDir%/Lua/config.lua" />
   <Other file="%ModDir%/Lua/Autorun/init.lua" />
